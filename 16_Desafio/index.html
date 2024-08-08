@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 01</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark text-white">
+    <nav class="navbar bg-dark">
+        <div>
+          <a class="navbar-brand" href="#">
+            <img src="logoDNC.png" alt="" width="100">
+          </a>
+        </div>
+    </nav>
+    <h1 class="text-center">PERGUNTAS USUÁRIO</h1>
+    <div class="container" id="question1">
+        <div class="inputpd">
+            <label>Qual área deseja seguir?</label>
+            <div>
+                <input type="radio" id="programador" name="area" value="Programador">
+                <label for="programador">Programador</label>
+            </div>
+            <div>
+                <input type="radio" id="analista" name="area" value="Analista">
+                <label for="analista">Analista</label>
+            </div>
+            <div>
+                <input type="radio" id="designer" name="area" value="Designer">
+                <label for="designer">Designer</label>
+            </div>
+            <button onclick="submitAnswer('question1', 'question2')">Enviar</button>
+        </div>
+    </div>
+    <div class="container" id="question2" style="display:none;">
+        <div class="inputpd">
+            <label>Qual linguagem deseja utilizar?</label>
+            <div>
+                <input type="radio" id="java" name="linguagem" value="Java">
+                <label for="java">Java</label>
+            </div>
+            <div>
+                <input type="radio" id="python" name="linguagem" value="Python">
+                <label for="python">Python</label>
+            </div>
+            <div>
+                <input type="radio" id="javascript" name="linguagem" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </div>
+            <button onclick="submitAnswer('question2', 'question3')">Enviar</button>
+        </div>
+    </div>
+    <div class="container" id="question3" style="display:none;">
+        <div class="inputpd">
+            <label>Qual modelo de trabalho?</label>
+            <div>
+                <input type="radio" id="home_office" name="modelo" value="Home Office">
+                <label for="home_office">Home Office</label>
+            </div>
+            <div>
+                <input type="radio" id="hibrido" name="modelo" value="Híbrido">
+                <label for="hibrido">Híbrido</label>
+            </div>
+            <div>
+                <input type="radio" id="presencial" name="modelo" value="Presencial">
+                <label for="presencial">Presencial</label>
+            </div>
+            <button onclick="submitAnswer('question3', 'question4')">Enviar</button>
+        </div>
+    </div>
+    <div class="container" id="question4" style="display:none;">
+        <div class="inputpd">
+            <label>Deseja trabalhar no Brasil?</label>
+            <div>
+                <input type="radio" id="brasil" name="local" value="Brasil">
+                <label for="brasil">Brasil</label>
+            </div>
+            <div>
+                <input type="radio" id="exterior" name="local" value="Exterior">
+                <label for="exterior">Exterior</label>
+            </div>
+            <button onclick="submitAnswer('question4', 'summary')">Enviar</button>
+        </div>
+    </div>
+    <div class="container" id="summary" style="display:none;">
+        <h2>Resumo</h2>
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
